@@ -14,7 +14,11 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
+    avatar: {
+        type: String,
+        default: "https://static-00.iconduck.com/assets.00/profile-major-icon-512x512-xosjbbdq.png"
+    },
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
